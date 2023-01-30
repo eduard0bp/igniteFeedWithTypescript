@@ -3,22 +3,27 @@ import { useState } from 'react'
 import { Avatar } from './Avatar'
 import './Comment.scss'
 
-export const Comment = ({ content, onDeleteComent }) => {
+interface CommentProps {
+  content: string
+  onDeleteComment: (comment: string) => void
+}
+
+export const Comment = ({ content, onDeleteComment }: CommentProps) => {
   const [likeCount, setLikeCount] = useState(0)
 
   const handleDeleteComment = () => {
-    onDeleteComent(content)
+    onDeleteComment(content)
   }
 
   const handleLikeComment = () => {
-    setLikeCount((state) => {
+    setLikeCount(state => {
       return state + 1
     })
   }
 
   return (
     <div className="comment">
-      <Avatar hasBorder={false} src="https://github.com/eduard0bp.png" />
+      <Avatar hasBorder={false} src="https://github.com/eduard0bp.png" alt=''/>
 
       <div className="comment-box">
         <div className="comment-content">

@@ -1,6 +1,12 @@
 import './Avatar.scss'
 
-export const Avatar = ({hasBorder = true, src}) => {
+interface AvatarProps {
+  hasBorder?: boolean
+  src: string
+  alt?: string
+}
+
+export const Avatar = ({hasBorder = true, src}: AvatarProps) => {
   return (
     <img
       className={hasBorder ? 'avatarWithBorder' : 'avatar'}
