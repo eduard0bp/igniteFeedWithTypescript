@@ -5,7 +5,7 @@ import { ChangeEvent, FormEvent, InvalidEvent, useState } from 'react'
 import ptBR from 'date-fns/locale/pt-BR'
 import './Post.scss'
 
-interface PostProps {
+export interface PostProps {
   author: {
     name: string
     role: string
