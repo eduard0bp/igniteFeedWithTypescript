@@ -51,7 +51,9 @@ export const Post = ({ author, publishedAt, content }: PostProps) => {
     setNewCommentText(event.target.value)
   }
 
-  const handleNewCommentInvalid = (event: InvalidEvent<HTMLTextAreaElement>) => {
+  const handleNewCommentInvalid = (
+    event: InvalidEvent<HTMLTextAreaElement>
+  ) => {
     event.target.setCustomValidity('Esse campo é obrigatório!')
   }
 

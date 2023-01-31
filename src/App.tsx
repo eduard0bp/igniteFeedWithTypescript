@@ -5,7 +5,7 @@ import { Post, PostProps } from './components/Post'
 import './App.scss'
 
 interface Post extends PostProps {
-  id: number;
+  id: number
 }
 
 export const App = () => {
